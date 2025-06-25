@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text to Speech ML</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="whisper-container">
+    <div class="header">
+      <img src="logo.png" class="logo" alt="Logo">
+      <h1 class="title">Text to Speech ML</h1>
+    </div>
+
+    <div class="box fade-in">
+      <label>Select Voice</label>
+      <select id="voiceSelected">
+        <option value="Joanna">Joanna - English</option>
+        <option value="Maja">Maja - Polish</option>
+        <option value="Enrique">Enrique - Spanish</option>
+        <option value="Marlene">Marlene - German</option>
+        <option value="Mathieu">Mathieu - French</option>
+      </select>
+
+      <textarea id="postText" placeholder="Type your message..."></textarea>
+      <div class="char-count" id="charCounter">Characters: 0</div>
+
+      <div class="buttons">
+        <button id="sayButton">🔊 Convert</button>
+        <button id="searchButton">🔄 Refresh</button>
+      </div>
+
+      <p id="postIDreturned" class="message"></p>
+    </div>
+
+    <div class="table-container fade-in">
+      <table id="posts">
+        <thead>
+          <tr>
+            <th>Voice</th>
+            <th>Text</th>
+            <th>Status</th>
+            <th>Audio</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
